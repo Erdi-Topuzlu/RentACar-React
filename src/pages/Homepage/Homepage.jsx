@@ -1,7 +1,10 @@
-import { Container, Grid } from "@mui/material";
-import Slide from "../../compenents/Slider/Slide";
+import { Container, Divider, Grid } from "@mui/material";
+import Slider from "../../compenents/Slider/Slider";
 import Header from "../../compenents/Header/Header";
 import Footer from "../../compenents/Footer/Footer";
+import Campaign from "../../compenents/Campaign/Campaign";
+import About from "../About/About";
+import { Link } from "react-router-dom";
 
 const slide = {
   title: "Title of a longer featured blog post",
@@ -12,7 +15,7 @@ const slide = {
   linkText: "Continue reading…",
 };
 
-const featuredPosts = [
+const campaigns = [
   {
     title: "Featured post",
     date: "Nov 12",
@@ -34,11 +37,28 @@ const featuredPosts = [
 function Homepage() {
   return (
     <Container maxWidth="xl">
+      
       <main>
         <Header />
-        <Slide post={slide} />
-        <Grid container spacing={4}></Grid>
-        <Grid container spacing={5} sx={{ mt: 3 }}></Grid>
+        <Slider post={slide} />
+        <div style={{ height: '2000px', width: '100%' }}></div>
+        <Grid container spacing={4}>
+            {campaigns.map((post) => (
+              <Campaign key={post.title} post={post} />
+            ))}
+          </Grid>
+          <Grid container spacing={5} sx={{ mt: 3 }}>
+            
+          </Grid>
+          
+      <Divider orientation="horizontal" />
+
+      <div id="about">
+      <About />
+      </div>
+              
+              
+      <Divider orientation="horizontal" />
         <Footer />
       </main>
     </Container>

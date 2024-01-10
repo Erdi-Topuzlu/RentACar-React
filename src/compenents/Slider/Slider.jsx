@@ -5,7 +5,7 @@ import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
 import Box from '@mui/material/Box';
 
-function Slide(props) {
+function Slider(props) {
   const { post } = props;
 
   return (
@@ -15,6 +15,7 @@ function Slide(props) {
         backgroundColor: 'grey.800',
         color: '#fff',
         mb: 4,
+        mt: 2,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
@@ -58,7 +59,7 @@ function Slide(props) {
   );
 }
 
-Slide.propTypes = {
+Slider.propTypes = {
   post: PropTypes.shape({
     description: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
@@ -68,4 +69,4 @@ Slide.propTypes = {
   }).isRequired,
 };
 
-export default Slide;
+export default Slider;
