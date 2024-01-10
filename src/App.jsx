@@ -7,12 +7,7 @@ import SignIn from "./pages/SignIn/SignIn";
 function App() {
   return (
     <>
-      <Container maxWidth="xl">
-        <Header />
-        
-        <Outlet />
-        <Footer />
-      </Container>
+      <Outlet />
     </>
   );
 }

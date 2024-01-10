@@ -6,7 +6,6 @@ import SearchIcon from '@mui/icons-material/Search';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import { NavLink } from 'react-router-dom';
-import SignIn from '../../pages/SignIn/SignIn';
 
 function Header() {
 
@@ -26,11 +25,11 @@ function Header() {
         <IconButton>
           <SearchIcon />
         </IconButton>
-        <a href={"/SignIn"}>
+        <NavLink to={"/SignIn"}>
         <Button variant="outlined" size="small">
           Sign in
         </Button>
-        </a>
+        </NavLink>
         
 
         <Button variant="outlined" size="small" style={{marginLeft:"5px"}}>
